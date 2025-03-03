@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorry Shraddha! 😢</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(45deg, #ffb6c1, #ff69b4);
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 2.5em;
+            animation: bounce 1s infinite;
+            margin: 20px 0;
+        }
+        
+        .baby-pics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        
+        img:hover {
+            transform: scale(1.05);
+        }
+        
+        .message {
+            background: rgba(255,255,255,0.9);
+            padding: 15px;
+            border-radius: 20px;
+            margin: 20px 0;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        
+        button {
+            background: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 15px 0;
+            transition: transform 0.3s;
+        }
+        
+        button:hover {
+            transform: scale(1.1);
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I'm So Sorry Shraddha! 😭💔</h1>
+        
+        <div class="baby-pics">
+            <img src="REPLACE_1" alt="Cute crying baby">
+            <img src="REPLACE_2" alt="Apology baby">
+            <img src="REPLACE_3" alt="Sorry baby">
+            <img src="REPLACE_4" alt="Forgive me">
+        </div>
+        
+        <div class="message">
+            🎀🌸💌<br>
+            I promise to never scare you again!<br>
+            Please forgive this silly friend? 😔<br>
+            Will you give me one more chance? 🤲🏻
+        </div>
+        
+        <button onclick="showSurprise()">Click for Special Surprise! 💖</button>
+    </div>
+
+    <script>
+        function showSurprise() {
+            alert("Thank you for being my amazing friend! 🌸\n\nEven when I'm being dumb,\nyou're still the best friend ever!");
+            document.body.style.animation = "rainbow 2s infinite";
+        }
+        
+        document.body.innerHTML += `
+            <style>
+                @keyframes rainbow {
+                    0% { background: #ffb6c1; }
+                    25% { background: #ffd700; }
+                    50% { background: #98fb98; }
+                    75% { background: #87ceeb; }
+                    100% { background: #ffb6c1; }
+                }
+                .heart {
+                    position: absolute;
+                    animation: float 3s infinite;
+                    font-size: 24px;
+                    pointer-events: none;
+                }
+                @keyframes float {
+                    0% { transform: translateY(100vh); opacity: 1; }
+                    100% { transform: translateY(-100vh); opacity: 0; }
+                }
+            </style>
+        `;
+
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }, 300);
+    </script>
+</body>
+</html>
